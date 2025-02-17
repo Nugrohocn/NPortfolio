@@ -1,0 +1,63 @@
+.dock-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  width: 60px; /* Lebar sidebar */
+}
+
+.dock-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 60px;
+  padding: 10px 0;
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dock-item:hover {
+  transform: scale(1.2);
+}
+
+.dock-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background 0.2s ease-in-out;
+}
+
+.dock-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dock-label {
+  position: absolute;
+  left: 70px; /* Geser ke samping */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dock-item:hover .dock-label {
+  opacity: 1;
+  transform: translateX(0);
+}
