@@ -54,6 +54,17 @@ const Showcase = () => {
     },
     {
       id: 5,
+      judul: "CRUD Fullstack",
+      title:
+        "Fullstack User Dashboard is a web application built with Laravel and ReactJS",
+      github: "https://github.com/Nugrohocn/fullstack-laravel-react",
+      gambar: "img/portofolio/fullstack.png",
+      kode: "Laravel | React JS | TailwindCSS | MySQL",
+      deskripsi:
+        "Fullstack User Dashboard is a web application built with Laravel and React that provides authentication features and CRUD functionality for managing user data. The backend is developed using an API built with Laravel, and authentication is handled using token-based authentication with Laravel Sanctum.",
+    },
+    {
+      id: 6,
       judul: "K-Means Clust",
       title: "Perform data clustering",
       github: "https://github.com/Nugrohocn/k-means_Clustering",
@@ -63,7 +74,7 @@ const Showcase = () => {
         "K-Means Clustering is an application built using Python to group data based on feature similarities. The K-Means algorithm is used to divide data into multiple clusters, enabling easier and more in-depth analysis of patterns within the dataset.",
     },
     {
-      id: 6,
+      id: 7,
       judul: "Smart Village Aikmel",
       title: "Population data collection website",
       website: "https://smartvillageaikmelutara.my.id",
@@ -73,7 +84,7 @@ const Showcase = () => {
         "Smart Village Aikmel is an application for recording population data in North Aikmel, designed to streamline and manage demographic information efficiently.",
     },
     {
-      id: 7,
+      id: 8,
       judul: "Pasar Online Surakarta (Poska)",
       title: "Online marketplace for vegetable products",
       github: "https://github.com/Nugrohocn/project-uas-semester3",
