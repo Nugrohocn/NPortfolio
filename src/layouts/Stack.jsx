@@ -12,6 +12,7 @@ import { HiOutlinePuzzle } from "react-icons/hi";
 
 const techStack = [
   { name: "React", category: "JavaScript Library", icon: <FaReact /> },
+  { name: "Next.js", category: "React Framework", icon: <SiNextdotjs /> },
   { name: "Laravel", category: "Backend Framework PHP", icon: <FaLaravel /> },
   { name: "Tailwind", category: "CSS Framework", icon: <SiTailwindcss /> },
   { name: "Bootstrap", category: "CSS Framework", icon: <SiBootstrap /> },

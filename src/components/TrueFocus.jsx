@@ -12,15 +12,14 @@ const TrueFocus = ({
 }) => {
   const words = sentence.split(" ");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastActiveIndex, setLastActiveIndex] = useState(null);
-  const containerRef = useRef(null);
-  const wordRefs = useRef([]);
   const [focusRect, setFocusRect] = useState({
     x: 0,
     y: 0,
     width: 0,
     height: 0,
   });
+  const containerRef = useRef(null);
+  const wordRefs = useRef([]);
 
   useEffect(() => {
     if (!manualMode) {
@@ -45,7 +44,7 @@ const TrueFocus = ({
 
   return (
     <div
-      className="relative flex gap-2 justify-end items-center whitespace-nowrap"
+      className="relative flex gap-2 justify-center items-center whitespace-nowrap"
       ref={containerRef}
     >
       {words.map((word, index) => (
@@ -62,8 +61,9 @@ const TrueFocus = ({
           {word}
         </span>
       ))}
+
       <motion.div
-        className="absolute top-0 left-0 pointer-events-none border-0"
+        className="absolute border-2 rounded-lg pointer-events-none"
         animate={{
           x: focusRect.x,
           y: focusRect.y,
@@ -73,8 +73,8 @@ const TrueFocus = ({
         }}
         transition={{ duration: animationDuration }}
         style={{
-          borderColor,
-          filter: "drop-shadow(0 0 4px var(--border-color))",
+          borderColor: borderColor,
+          boxShadow: `0 0 10px ${glowColor}`,
         }}
       />
     </div>

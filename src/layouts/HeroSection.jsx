@@ -2,6 +2,11 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { BiCloudDownload } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
 import TrueFocus from "../components/TrueFocus";
+import BlurText from "../components/BlurText";
+
+const handleAnimationComplete = () => {
+  console.log("Animation completed!");
+};
 
 const HeroSection = () => {
   return (
@@ -15,17 +20,18 @@ const HeroSection = () => {
           <h1 className="text-3xl lg:text-4xl font-semibold text-white">
             Hello I'm 👋
           </h1>
+
           <span
-            className="inline-block text-3xl lg:text-5xl font-semibold text-primary bg-pink mt-4"
+            className="inline-block text-3xl lg:text-5xl text-primary bg-pink mt-4"
             style={{ wordSpacing: "-2px" }}
           >
-            <TrueFocus
-              sentence="Nur Cahyo Nugroho"
-              manualMode={false}
-              blurAmount={5}
-              borderColor="white"
-              animationDuration={1}
-              pauseBetweenAnimations={1}
+            <BlurText
+              text="Nur Cahyo Nugroho"
+              delay={200}
+              animateBy="words"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+              className="text-[2.70rem] font-bold "
             />
           </span>
           <h2 className="text-sm lg:text-lg mt-4 text-white">

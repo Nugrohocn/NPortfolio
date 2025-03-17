@@ -25,6 +25,7 @@ const Homepage = () => {
   return (
     <div className="">
       <HeroSection />
+
       <Experience />
       <Showcase />
       <Stack />
