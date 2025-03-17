@@ -4,7 +4,7 @@ import { VscBriefcase } from "react-icons/vsc";
 
 const experiences = [
   {
-    role: "Software Engineer",
+    role: "Web Developer ",
     company: "PT Media Sarana Digitalindo",
     date: "26 Agustus 2024 - 4 Januari 2025",
     image: "img/msd1.png",
