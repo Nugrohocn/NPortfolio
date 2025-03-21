@@ -67,7 +67,7 @@ const HeroSection = () => {
               <BsGithub />
             </a>
             <a
-              href="https://drive.google.com/file/d/1GEmGdbr95Q7z0e3IYPZyj9HPxVmcQNtu/view?usp=sharing"
+              href="https://drive.google.com/file/d/11A9QU-igB6muQUTEljNFvFHWOzixSUiU/view?usp=sharing"
               className="w-35 lg:w-48 h-9 rounded-full flex justify-center text-primary items-center border border-primary hover:bg-primary hover:text-slate-900 transition duration-200"
               target="_blank"
               rel="noopener noreferrer"
