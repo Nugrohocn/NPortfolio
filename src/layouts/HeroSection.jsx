@@ -35,9 +35,9 @@ const HeroSection = () => {
             />
           </span>
           <h2 className="text-sm lg:text-lg mt-4 text-white">
-            Undergraduate Informatics Engineering <br />
+            Freshgradute Informatics Engineering <br />
             <span className="text-primary text-lg font-semibold">
-              Universitas Duta Bangsa Surakarta
+              Fullstack Web Developer
             </span>
           </h2>
 
@@ -67,7 +67,7 @@ const HeroSection = () => {
               <BsGithub />
             </a>
             <a
-              href="https://drive.google.com/file/d/11A9QU-igB6muQUTEljNFvFHWOzixSUiU/view?usp=sharing"
+              href="https://drive.google.com/file/d/10uYxd4JvtzIC6HJaTUNELnNwSG1kawXc/view?usp=sharing"
               className="w-35 lg:w-48 h-9 rounded-full flex justify-center text-primary items-center border border-primary hover:bg-primary hover:text-slate-900 transition duration-200"
               target="_blank"
               rel="noopener noreferrer"

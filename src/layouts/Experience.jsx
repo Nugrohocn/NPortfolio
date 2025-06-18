@@ -6,7 +6,7 @@ const experiences = [
   {
     role: "Web Developer ",
     company: "PT Media Sarana Digitalindo",
-    date: "26 Agustus 2024 - 4 Januari 2025",
+    date: "26 August 2024 - 4 January 2025",
     image: "img/msd1.png",
     type: ["Internship", "Onsite"],
     description:
@@ -15,11 +15,12 @@ const experiences = [
   {
     role: "Fullstack Web Developer",
     company: "Trisya Media Teknologi",
-    date: "12 Maret 2025 - Sekarang",
+    date: "12 March 2025 - Now",
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQEeC9gtKWxL6Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723371281178?e=2147483647&v=beta&t=SmBsu1qC-KmKOe3_OBD9YV_iaGPi4DqDdF-Ll_TIPg8",
     type: ["Internship", "Remote"],
-    description: "",
+    description:
+      "I was responsible for developing new features and fixing bugs to enhance functionality and user experience (UX) across various web applications. My contributions included full-stack projects such as a Company Profile website, where I built responsive user interfaces (UI) and handled backend implementation, as well as a Student Management Website focusing on CRUD (Create, Read, Update, Delete) functionalities for data management. In every task, I proactively collaborated with the UI/UX team to translate business requirements into effective technical solutions and ensured all development tasks were completed on time through efficient teamwork.",
   },
 ];
 
@@ -28,7 +29,7 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="flex justify-center items-center w-full min-h-screen">
+    <div className="flex justify-center items-center w-full min-h-screen pb-30 ">
       <motion.div
         className="container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-5 px-4 text-white   "
         ref={ref}
