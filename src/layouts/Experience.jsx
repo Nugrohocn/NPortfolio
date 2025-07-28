@@ -4,23 +4,31 @@ import { VscBriefcase } from "react-icons/vsc";
 
 const experiences = [
   {
-    role: "Web Developer ",
+    role: "Web Developer",
     company: "PT Media Sarana Digitalindo",
-    date: "26 August 2024 - 4 January 2025",
-    image: "img/msd1.png",
+    date: "August 2024 - January 2025",
+    image: "img/msd2.png",
     type: ["Internship", "Onsite"],
-    description:
-      "As an intern, I contributed to the development of a tourism recommendation system in Karanganyar Regency using the Knowledge Base Recommendation method with Laravel. Additionally, I was involved in SEO optimization through Google Search Console and wrote articles to enhance the website’s visibility and search engine ranking.",
+    description: [
+      "Developed a web-based recommendation system using Laravel and MySQL, optimizing search result accuracy through the Knowledge Base method.",
+      "Implemented various Google Search Console strategies to improve website visibility and search engine rankings.",
+      "Applied technical SEO strategies in content writing, resulting in articles appearing on the first page of Google and significantly increasing organic traffic.",
+    ],
   },
   {
     role: "Fullstack Web Developer",
     company: "Trisya Media Teknologi",
-    date: "12 March 2025 - Now",
+    date: "March 2025 - Now",
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQEeC9gtKWxL6Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723371281178?e=2147483647&v=beta&t=SmBsu1qC-KmKOe3_OBD9YV_iaGPi4DqDdF-Ll_TIPg8",
     type: ["Internship", "Remote"],
-    description:
-      "I was responsible for developing new features and fixing bugs to enhance functionality and user experience (UX) across various web applications. My contributions included full-stack projects such as a Company Profile website, where I built responsive user interfaces (UI) and handled backend implementation, as well as a Student Management Website focusing on CRUD (Create, Read, Update, Delete) functionalities for data management. In every task, I proactively collaborated with the UI/UX team to translate business requirements into effective technical solutions and ensured all development tasks were completed on time through efficient teamwork.",
+    // Diubah menjadi array agar konsisten
+    description: [
+      "Developed new features and fixed bugs to enhance functionality and improve user experience (UX) across various web applications.",
+      "Contributed to the development of Company Profile websites, Student Management Systems, and CMS projects, covering both frontend (responsive UI) and backend (API & logic) implementation",
+      "Proactively collaborated with the UI/UX team to translate business requirements into effective and scalable technical solutions.",
+      "Ensured timely completion of development tasks through solid teamwork and clear communication.",
+    ],
   },
 ];
 
@@ -29,9 +37,9 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="flex justify-center items-center w-full min-h-screen pb-30 ">
+    <div className="flex justify-center items-center w-full min-h-screen pb-10 ">
       <motion.div
-        className="container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-5 px-4 text-white   "
+        className="container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-5 px-4 text-white"
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -52,12 +60,12 @@ const Experience = () => {
               },
             }}
           >
-            <span className="flex gap-3 mb-3">
+            <span className="flex items-center gap-3 mb-3">
               <VscBriefcase /> Experience
             </span>
           </motion.h2>
           <motion.p
-            className="text-base md:text-lg mb-5 text-gray-400 text-justify"
+            className="text-base md:text-lg mb-8 text-gray-400 text-justify"
             variants={{
               hidden: { y: 30, opacity: 0 },
               visible: {
@@ -74,7 +82,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="flex flex-col sm:flex-row gap-6 h-auto sm:h-72 px-4 sm:px-4 mb-16"
+              className="flex flex-col sm:flex-row gap-6 mb-12" // Mengatur margin bawah di sini
               variants={{
                 hidden: { opacity: 0, y: 50 },
                 visible: {
@@ -84,8 +92,9 @@ const Experience = () => {
                 },
               }}
             >
+              {/* Image Section */}
               <motion.div
-                className="flex justify-center items-center w-full sm:w-1/3 h-auto rounded-full px-3 relative"
+                className="flex justify-center items-start w-full sm:w-1/3"
                 variants={{
                   hidden: { opacity: 0, scale: 0.8 },
                   visible: {
@@ -97,13 +106,14 @@ const Experience = () => {
               >
                 <img
                   src={exp.image}
-                  className="w-32 h-32 object-cover rounded-full hover:text-primary"
-                  alt="Experience"
+                  className="w-32 h-32 object-cover rounded-full border-2 border-gray-700 bg-white"
+                  alt={`${exp.company} logo`}
                 />
               </motion.div>
 
+              {/* Details Section */}
               <motion.div
-                className="w-full sm:w-2/3 md:mt-6 text-justify"
+                className="w-full sm:w-2/3 text-justify"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: {
@@ -113,26 +123,35 @@ const Experience = () => {
                   },
                 }}
               >
-                <h1 className="text-md sm:text-lg">{exp.role}</h1>
-                <h1 className="text-xl sm:text-2xl font-bold">{exp.company}</h1>
-                <span className="text-md">{exp.date}</span>
+                <h3 className="text-md sm:text-lg text-primary font-semibold">
+                  {exp.role}
+                </h3>
+                <h4 className="text-xl sm:text-2xl font-bold">{exp.company}</h4>
+                <p className="text-sm text-gray-400 mb-4">{exp.date}</p>
 
-                <motion.div className="flex gap-2 mt-6">
+                <div className="flex gap-2 mb-4">
                   {exp.type.map((tag, i) => (
                     <span
                       key={i}
-                      className="flex justify-center items-center px-5 py-2 text-sm font-semibold border border-primary rounded-full text-primary"
+                      className="px-3 py-1 text-xs font-semibold border border-primary rounded-full text-primary"
                     >
                       {tag}
                     </span>
                   ))}
-                </motion.div>
+                </div>
 
-                <motion.div className="mt-4 transition duration-500 w-full">
-                  <div className="text-sm sm:text-base w-full flex flex-col text-justify">
-                    <span>{exp.description}</span>
-                  </div>
-                </motion.div>
+                <div className="text-gray-300">
+                  {/* INI BAGIAN YANG DIPERBAIKI */}
+                  {Array.isArray(exp.description) ? (
+                    <ul className="list-disc list-outside pl-5 space-y-2 text-sm sm:text-base">
+                      {exp.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{exp.description}</p>
+                  )}
+                </div>
               </motion.div>
             </motion.div>
           ))}
