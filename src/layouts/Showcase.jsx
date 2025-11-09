@@ -36,9 +36,9 @@ const Showcase = () => {
       judul: "Rekomendasi Wisata (Rekta)",
       title: "Tourism recommendation system using knowledge-based approach",
       github:
-        "https://github.com/Nugrohocn/Sistem-Rekomendasi-Wisata-Knowledge-Base-Recommendation",
+        "https://github.com/Nugrohocn/tourism-recommendations-v2.git",
       gambar: "img/portofolio/3.png",
-      kode: "Laravel | Bootstrap",
+      kode: "Laravel | React JS | Tailwind CSS",
       deskripsi:
         "Rekta is a web-based recommendation system that applies the Knowledge-Based Recommendation method to suggest tourism destinations based on user preferences. It evaluates attributes such as category, location, price, rating, and facilities to generate accurate destination suggestions.",
     },
@@ -215,3 +215,4 @@ const Showcase = () => {
 };
 
 export default Showcase;
+
